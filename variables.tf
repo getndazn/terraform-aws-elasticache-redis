@@ -239,3 +239,9 @@ variable "cluster_mode_num_node_groups" {
   description = "Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications"
   default     = 0
 }
+
+variable "prevent_destroy_enabled" {
+  type = bool
+  description = "Whether the lifecycle policy to prevent desctruction of the resource is enabled or disabled"
+  default = false
+}

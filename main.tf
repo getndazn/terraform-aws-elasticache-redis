@@ -103,6 +103,10 @@ resource "aws_elasticache_replication_group" "default" {
 
   tags = module.label.tags
 
+  lifecycle {
+    prevent_destory = var.prevent_destory_enabled
+  }
+
   dynamic "cluster_mode" {
     for_each = var.cluster_mode_enabled ? ["true"] : []
     content {
