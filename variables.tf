@@ -241,7 +241,7 @@ variable "cluster_mode_num_node_groups" {
 }
 
 variable "prevent_destroy_enabled" {
-  type = bool
+  type        = bool
   description = "Whether the lifecycle policy to prevent desctruction of the resource is enabled or disabled"
-  default = false
+  default     = false
 }

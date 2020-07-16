@@ -104,7 +104,7 @@ resource "aws_elasticache_replication_group" "default" {
   tags = module.label.tags
 
   lifecycle {
-    prevent_destory = var.prevent_destory_enabled
+    prevent_destroy = var.prevent_destory_enabled
   }
 
   dynamic "cluster_mode" {
